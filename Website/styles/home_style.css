@@ -9,6 +9,10 @@ body {
     font-family: Roboto;
 }
 
+#home {
+    display: none;
+}
+
 header {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/background.jpeg);
     height: 250vh;
@@ -130,7 +134,15 @@ header {
     color: #333;
 }
 
-@media (max-width:650px) {
+#cool {
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    margin: 45% 25%;
+    align-self: center;
+}
+
+@media (max-width:1500px) {
     .logo {
         position: fixed;
         left: 0;
@@ -159,24 +171,16 @@ header {
     }
 
     .text {
-        width: 100%;
-        height: 100%;
-        margin: 100% 0;
-    }
-    .text h1 {
-        font-size: 30px;
-    }
-    .text p {
-        font-size: 18px;
-    }
-    .text a {
-        font-size: 12px;
-        padding: 10px;
+        display: none;
     }
 
     .logo_picture {
         width: 100%;
         height: 100%;
         margin: 30% 0;
+    }
+
+    #cool {
+        display: none;
     }
 }
