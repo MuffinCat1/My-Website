@@ -57,7 +57,7 @@ if(isset($_GET['user']))
             
             <div id="about" class="text">
                 <h1>About Me:</h1>
-                <p>Im a game developer who realy loves to create game for fun<br>and i hope my games will be ok </p>
+                <p>Im a game developer who realy loves to create game for fun and i hope my games will be ok </p>
                 <a href="#home">Home</a>
             </div>
             
