@@ -17,7 +17,6 @@ if(isset($_COOKIE['user'])){
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +32,7 @@ if(isset($_COOKIE['user'])){
 <body>
     <header>
         <div id="home" class="wrapper">
-            
-            <script>
-                $("#home").fadeIn(4000);
-            </script>
+            <script> $("#home").fadeIn(4000); </script>
 
             <div class="logo_picture">
                 <img src="styles/images/logo.png" alt="Logo">
@@ -59,7 +55,7 @@ if(isset($_COOKIE['user'])){
                 <ul class="menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="https://www.google.com/search?q=games" target="_blank">Games</a></li>
+                    <li><a href="#games">Games</a></li>
                 
                     <?php if(isset($_GET['user'])) { ?>
                         <li><p>Hello <?php echo $_SESSION['name']; ?></p></li>
@@ -70,20 +66,28 @@ if(isset($_COOKIE['user'])){
                 </ul>
             </div>
             
-            <div id="about" class="text">
+            <div id="games" class="gamesText">
+                <img src="styles/images/game.jpg" alt="games">
+                <h1>My Games</h1>
+                <p>Those are my games if you want click here</p>
+                <a href="https://www.google.com/search?q=games">Home</a>
+            </div>
+
+            <div id="about" class="aboutText">
+                <img src="styles/images/about_me.png" alt="about">
                 <h1>About Me:</h1>
-                <p>Im a game developer who realy loves to create game for fun and i hope my games will be ok </p>
+                <p>Im a game developer who realy loves to create game for fun and i hope my games will be ok</p>
                 <a href="#home">Home</a>
             </div>
-            
         </div>
     
     </header>
     <script type="text/javascript" src="scripts/smooth.js"></script>
+    
     <script>
-        $("body").on('click', '.logo', function() {
-            document.getElementById('home').scrollIntoView(0);
-        });
+    $("body").on('click', '.logo', function() {
+        document.getElementById('home').scrollIntoView(0);
+    });
     </script>
 </body>
 </html>
