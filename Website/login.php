@@ -18,10 +18,10 @@ if(isset($_POST['uname']) && isset($_POST['password'])){
         header("Location: loginPage.php?error=Please Enter the following requirments");
         exit();
     } else if(empty($uname)){
-        header("Location: loginpage.php?error=User Name is required");
+        header("Location: loginPage.php?error=User Name is required");
         exit();
     } else if (empty($pass)){
-        header("Location: loginpage.php?error=Password is required");
+        header("Location: loginPage.php?error=Password is required");
         exit();
     } else {
         $sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
