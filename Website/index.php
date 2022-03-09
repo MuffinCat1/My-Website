@@ -1,6 +1,21 @@
 <?php
-if(isset($_GET['user']))
-    session_start();
+session_start();
+
+$cookiename = null;
+setcookie("checkcoockies", "cookies enabled");
+
+if(!isset($_COOKIE['checkcoockies'])) {
+    echo "enable cookies";
+    exit(-1);
+}
+
+if(isset($_COOKIE['user'])){
+    $cookiename = $_COOKIE['user'];
+    
+    if(!isset($_GET['user']) && isset($_COOKIE['is_out']) && $_COOKIE['is_out'] == "False"){
+        header("Location: index.php?user=$cookiename");
+    }
+}
 ?>
 
 <!DOCTYPE html>
