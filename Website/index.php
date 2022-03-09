@@ -79,7 +79,7 @@ if(isset($_COOKIE['user'])){
         </div>
     
     </header>
-    <script type="text/javascript" src="smooth.js"></script>
+    <script type="text/javascript" src="scripts/smooth.js"></script>
     <script>
         $("body").on('click', '.logo', function() {
             document.getElementById('home').scrollIntoView(0);
