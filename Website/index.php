@@ -2,10 +2,10 @@
 session_start();
 
 $cookiename = null;
-setcookie("checkcoockies", "cookies enabled");
+setcookie("demo-cookie", "demo-data", time() + 3600, '/');
 
-if(!isset($_COOKIE['checkcoockies'])) {
-    echo "enable cookies";
+if(count($_COOKIE) == 0) {
+    echo "Cookies are disabled in your Browser.";
     exit(-1);
 }
 
